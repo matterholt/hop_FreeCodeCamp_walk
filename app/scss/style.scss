@@ -20,15 +20,15 @@ need some studies on naming
 
 .page_about{
     grid-area: subtitle ;
+    background: url(images/Cascade.jpg);
     &__subtitle{
-        border-color: rgb(255, 165, 0);
-        border-width: 5px;    
-        border-style: solid;
-        width: 500px;
         padding: 20px;
-        margin: -15px;
+        font-size: 50px;
+        color: black;
+        z-index: 2;
     }
     &__picture--small{
-        width: 200px;
+        padding: 2rem;
+        z-index: 1;
     }
 }

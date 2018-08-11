@@ -12,9 +12,6 @@ body{
     display: grid;
     grid-template-columns: 0.5fr 1fr 10fr 1fr 0.5fr;
     grid-auto-flow: flow;
-    margin: 20px;
-    padding: 20px;
-    border: 5px dashed steelblue;
     grid-template-areas: 
         ". title title title ."
         ". subtitle subtitle subtitle.";
