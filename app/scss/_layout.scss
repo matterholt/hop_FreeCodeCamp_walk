@@ -1,5 +1,21 @@
+:root{
+    /*below is a taste of css variables*/
+    --primaryColor-back: rgba(45,45,45,0.1);
+}
+@media (max-width: 350px) {
+    :root{
+        --primaryColor-back: #45678a;
+    }
+}
+
 body{
     display: grid;
     grid-template-columns: 0.5fr 1fr 10fr 1fr 0.5fr;
     grid-auto-flow: flow;
+    margin: 20px;
+    padding: 20px;
+    border: 5px dashed steelblue;
+    grid-template-areas: 
+        ". title title title ."
+        ". subtitle subtitle subtitle.";
 }
