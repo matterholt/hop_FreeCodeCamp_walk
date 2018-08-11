@@ -1,3 +1,32 @@
 @import 'layout.scss';
-@import 'carryOver.scss';   
+  
 
+/*BEM block element modifier*/
+
+.acList {
+    grid-area: title;
+    &__title{
+        color: #1e90ff;
+        font-family: Lobster, monospace;
+        font-weight: 900;
+        font-size: 5rem;
+        position: relative;
+        left: 10%;
+        letter-spacing: 2px;
+    }
+
+}
+.page_about{
+    grid-area: subtitle ;
+    &__subtitle{
+        border-color: rgb(255, 165, 0);
+        border-width: 5px;    
+        border-style: solid;
+        width: 500px;
+        padding: 20px;
+        margin: -15px;
+    }
+    &__picture--small{
+        width: 200px;
+    }
+}
