@@ -1,5 +1,4 @@
 @import 'layout.scss';
-  
 
 /*BEM block element modifier*/
 
@@ -16,6 +15,7 @@
     }
 
 }
+
 .page_about{
     grid-area: subtitle ;
     &__subtitle{
