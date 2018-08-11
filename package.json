@@ -1,0 +1,27 @@
+{
+  "name": "hops",
+  "version": "1.0.0",
+  "description": "FCODECAMP_htmlWalk",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matterholt/hop_FreeCodeCamp_walk.git"
+  },
+  "keywords": [
+    "hop_basicHTML"
+  ],
+  "author": "MAtterholt",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/matterholt/hop_FreeCodeCamp_walk/issues"
+  },
+  "homepage": "https://github.com/matterholt/hop_FreeCodeCamp_walk#readme",
+  "devDependencies": {
+    "browser-sync": "^2.24.6",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^4.0.1"
+  }
+}
