@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>animation play</title>
+    <style>
+   div {
+    height: 40px;
+    width: 70px;
+    background: black;
+    margin: 50px auto;
+    border-radius: 5px;
+    animation-fill-mode: forwards;
+    position: relative;
+  }
+  #rect{
+      animation: rainbow;
+      animation-duration: 3s;
+  }
+      @keyframes rainbow {
+          0%{
+              background-color: blue;
+              top: 0px;
+              left: 0px;
+          }
+          50% {
+              background-color: green;
+              top:50px;
+              left: 25px;
+          }
+          100% {
+              background-color: yellow;
+              top: 0px;
+              left: -25px;
+          }
+      } 
+ button {
+    border-radius: 5px;
+    color: white;
+    background-color:   #0F5897;
+    padding: 5px 10px 8px 10px;
+    }
+    button:hover{
+        animation-name: backgroundColor;
+        animation-duration: 500ms;
+        animation-fill-mode: forwards;
+    }
+    @keyframes backgroundColor  {
+        100%{background-color: red;}
+    }
+    #ball{
+        width:70px;
+        height: 70px;
+        margin: 50px auto;
+        position: fixed;
+        left: 20%;
+        border-radius:50%;
+        background: linear-gradient(
+        35deg,
+        #ccffff,
+        #ffcccc );
+        animation-name: fade;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+    }
+    @keyframes fade{
+        50%{
+            left: 60%;
+            opacity: 0.5;
+            width: 50px;
+            height: 70px;
+        }
+    }
+    .containerHeart{
+        position: fixed;
+        padding: 0;
+        margin: 0;
+        top:0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: white;
+        animation-name: backdiv;
+        animation-duration: 1s;
+    }
+    .heart{
+        position: absolute;
+        margin: auto;
+        top 0;
+        right 0;
+        bottom 0;
+        left 0;
+        
+
+    }
+    
+    </style>
+</head>
+<body>
+        <div class="containerHeart"></div>
+        <div class="heart"></div>
+
+
+    <div id="ball"></div>
+    <div id= "rect">
+    </div>
+    <button>Hit ME</button>
+</body>
+</html>
