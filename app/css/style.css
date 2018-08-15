@@ -15,6 +15,16 @@ body {
 /*BEM block element modifier 
 need some studies on naming
 */
+* {
+  box-sizing: border-box; }
+
+img {
+  display: block; }
+
+body {
+  margin: 0;
+  background: #f0f0f0; }
+
 .acList {
   grid-area: title; }
   .acList__title {
@@ -27,13 +37,10 @@ need some studies on naming
     letter-spacing: 2px; }
 
 .page_about {
-  grid-area: subtitle;
-  background: url(images/Cascade.jpg); }
+  grid-area: subtitle; }
   .page_about__subtitle {
-    padding: 20px;
-    font-size: 50px;
     color: black;
-    z-index: 2; }
+    width: 25%; }
   .page_about__picture--small {
-    padding: 2rem;
-    z-index: 1; }
+    width: 25%;
+    border-radius: 50%; }
