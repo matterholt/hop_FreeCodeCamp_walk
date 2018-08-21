@@ -1,4 +1,16 @@
 
+:root{
+    /*below is a taste of css variables*/
+    --primaryColor-back: #45678a;
+    --primaryColor_fore: #deba8c;
+}
+@media (min-width: 350px) {
+    :root{
+        --primaryColor-back: #45678a;
+    }
+}
+
+
 /*BEM block element modifier 
 need some studies on naming
 */
@@ -8,9 +20,9 @@ body{
     grid-auto-flow: flow;
     grid-template-areas: 
         " . title title title ."
-        " . subtitle subtitle subtitle . "
-        " . beerAttr beerAttr beerAttr . "
-        " . beerLike beerLike beerLike . ";
+        " . . subtitle . . "
+        " . . beerAttr . . "
+        " . . beerLike . . ";
 }
 
 img{
@@ -28,7 +40,7 @@ body{
         color: #1e90ff;
         font-family: Lobster, monospace;
         font-weight: 900;
-        font-size: 5rem;
+        font-size: 2rem;
         position: relative;
         left: 10%;
         letter-spacing: 2px;
@@ -44,21 +56,39 @@ body{
     }
     &__picture--small{
         width: 25%;
-        border-radius: 50%;
+        border-radius: 5%;
     }
 }
+
+.beerAttr {
+    grid-area: beerAttr;
+    grid-row: 5;
+    width: 600px;
+    background-color: var(--primaryColor-back, grey);
+    color: var(--primaryColor-fore, red);
+    padding: 20px;
+    margin: 20px;
+    letter-spacing: 2px;
+    font-size: 15px;
+    border-radius: 1rem;
+    &__info{
+        text-align: center;
+        height: 50px;
+        font-weight: 800;
+    }
+    &--boxShadow{
+        box-shadow: 7px 8px 9px rgba(0,0,0,0.19);
+    }
+}
+
+
+
+
 /* below is a being orginal that has been updated to SCSS nesting and grid*/
 /* update anything below with BEM method */
 
 [type~='checkbox'] {
     margin: 20px;
-}
-
-.smaller-image {
-
-}
-.orange-border {
-
 }
 .thin-red-border:hover {
     border-color:#000;
@@ -68,24 +98,7 @@ body{
     border: 10px solid var(--primaryColor-back, grey);
     border-radius: 50%;
 }
-.beerAttr {
-    grid-area: beerAttr;
-    grid-row: 5;
-    width: 500px;
-    background-color: var(--primaryColor-back, grey);
-    padding: 20px;
-    margin: 20px;
-    h2 {
-        text-align: center;
-        height: 50px;
-        font-weight: 800;
-    }
-    p {
-        text-align: justify;
-        font-weight: 200;
-        line-height: 25px;
-    }
-}
+
 
 #beerLike{
     grid-area: beerLike;
@@ -96,6 +109,3 @@ body{
     margin: 20px;
 }
 
-.boxShadow{
-    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-}
