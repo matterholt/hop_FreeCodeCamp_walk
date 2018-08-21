@@ -1,11 +1,30 @@
-@import 'layout.scss';
-@import 'carryOver.scss';   
 
-/*BEM block element modifier*/
+/*BEM block element modifier 
+need some studies on naming
+*/
+body{
+    display: grid;
+    grid-template-columns: 0.5fr 1fr 10fr 1fr 0.5fr;
+    grid-auto-flow: flow;
+    grid-template-areas: 
+        " . title title title ."
+        " . subtitle subtitle subtitle . "
+        " . beerAttr beerAttr beerAttr . "
+        " . beerLike beerLike beerLike . ";
+}
+
+img{
+    display: block;
+
+}
+body{
+    margin: 0;
+    background: #f0f0f0;
+}
 
 .acList {
     grid-area: title;
-    __title{
+    &__title{
         color: #1e90ff;
         font-family: Lobster, monospace;
         font-weight: 900;
@@ -16,17 +35,67 @@
     }
 
 }
-.page_about {
+
+.page_about{
     grid-area: subtitle ;
-__subtitle{
-        border-color: rgb(255, 165, 0);
-        border-width: 5px;    
-        border-style: solid;
-        width: 500px;
-        padding: 20px;
-        margin: -15px;
+    &__subtitle{
+        color: black;
+        width: 25%;
     }
-__picture--small{
-        width: 200px;
+    &__picture--small{
+        width: 25%;
+        border-radius: 50%;
     }
+}
+/* below is a being orginal that has been updated to SCSS nesting and grid*/
+/* update anything below with BEM method */
+
+[type~='checkbox'] {
+    margin: 20px;
+}
+
+.smaller-image {
+
+}
+.orange-border {
+
+}
+.thin-red-border:hover {
+    border-color:#000;
+    color: rgb(255, 165, 0);
+}
+.thick-green-border {
+    border: 10px solid var(--primaryColor-back, grey);
+    border-radius: 50%;
+}
+.beerAttr {
+    grid-area: beerAttr;
+    grid-row: 5;
+    width: 500px;
+    background-color: var(--primaryColor-back, grey);
+    padding: 20px;
+    margin: 20px;
+    h2 {
+        text-align: center;
+        height: 50px;
+        font-weight: 800;
+    }
+    p {
+        text-align: justify;
+        font-weight: 200;
+        line-height: 25px;
+    }
+}
+
+#beerLike{
+    grid-area: beerLike;
+    grid-row: 6;
+    width: 500px;
+    background-color: var(--primaryColor-back, grey);
+    padding: 1.5em;
+    margin: 20px;
+}
+
+.boxShadow{
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 }
