@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>FCC FlexBox</title>
+    <style>
+        #box-container{
+            height: 500px;
+            display: flex;
+        }
+        #box-1{
+            background-color: dodgerblue;
+            width: 50%;
+            height: 50%;
+        }
+        #box-2{
+            background-color: orangered;
+            width: 50%;
+            height: 50%;
+        }
+        #box-container2{
+            height: 500px;
+            display: flex;
+            flex-direction: row-reverse;
+        }
+        #box-2-1{
+            background-color: rgb(128, 161, 197);
+            width: 50%;
+            height: 50%;
+        }
+        #box-2-2{
+            background-color: rgb(170, 126, 110);
+            width: 50%;
+            height: 50%;
+        }
+    </style>
+</head>
+<body>
+    <h1>recreate a tweet embed</h1>
+    <hr>
+    
+    
+    <div id="tweetEmbed">
+            <header>
+                    <img src="" alt="" class="profile-thumbnail">
+                    <div class="profile-name">
+                      <h3>Matterholt</h3>
+                      <h4>@ossia</h4>
+                    </div>
+                    <div class="follow-btn">
+                      <button>Follow</button>
+                    </div>
+                </header>
+                <div id="inner">
+                        <p>I meet so many people who are in search of that one trick that will help them work smart. Even if you work smart, you still have to work hard.</p>
+                        <span class="date">1:32 PM - 12 Jan 2018</span>
+                        <hr>
+                      </div>
+                      <footer>
+                        <div class="stats">
+                          <div class="Retweets">
+                            <strong>107</strong> Retweets
+                          </div>
+                          <div class="likes">
+                            <strong>431</strong> Likes
+                          </div>
+                        </div>
+                        <div class="cta">
+                          <button class="share-btn">Share</button>
+                          <button class="retweet-btn">Retweet</button>
+                          <button class="like-btn">Like</button>
+                        </div>
+                      </footer>
+    </div>
+
+
+
+    <div id="box-container">
+        <div id="box-1"></div>
+        <div id="box-2"></div>
+    </div>
+    <h1> flex box rows in reverse</h1>
+    <div id="box-container2">
+            <div id="box-2-1"></div>
+            <div id="box-2-2"></div>
+    </div>
+    
+</body>
+</html>

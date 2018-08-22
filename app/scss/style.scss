@@ -1,11 +1,29 @@
-@import 'layout.scss';
+
+:root{
+    /*below is a taste of css variables*/
+    --primaryColor-back: hsl(202, 47%, 20%);
+    --primaryColor_fore: #f1a94b;
+}
+@media (min-width: 350px) {
+    :root{
+        --primaryColor-back: #45678a;
+    }
+}
 
 /*BEM block element modifier 
 need some studies on naming
 */
-*{
-    box-sizing: border-box;
+body{
+    display: grid;
+    grid-template-columns: 0.5fr 1fr 10fr 1fr 0.5fr;
+    grid-auto-flow: flow;
+    grid-template-areas: 
+        " . title title title ."
+        " . . subtitle . . "
+        " . . beerAttr . . "
+        " . . beerLike . . ";
 }
+
 img{
     display: block;
 
@@ -21,7 +39,7 @@ body{
         color: #1e90ff;
         font-family: Lobster, monospace;
         font-weight: 900;
-        font-size: 5rem;
+        font-size: 2rem;
         position: relative;
         left: 10%;
         letter-spacing: 2px;
@@ -37,6 +55,56 @@ body{
     }
     &__picture--small{
         width: 25%;
-        border-radius: 50%;
+        border-radius: 5%;
     }
 }
+
+.beerAttr {
+    grid-area: beerAttr;
+    grid-row: 5;
+    width: 600px;
+    background-color: var(--primaryColor-back, grey);
+    color: var(--primaryColor_fore, red);
+    padding: 20px;
+    margin: 20px;
+    letter-spacing: 2px;
+    font-size: 15px;
+    border-radius: 1rem;
+    &__info{
+        text-align: center;
+        height: 50px;
+        font-weight: 800;
+    }
+    &--boxShadow{
+        box-shadow: 7px 8px 9px rgba(0,0,0,0.19);
+    }
+}
+
+
+
+
+/* below is a being orginal that has been updated to SCSS nesting and grid*/
+/* update anything below with BEM method */
+
+[type~='checkbox'] {
+    margin: 20px;
+}
+.thin-red-border:hover {
+    border-color:#000;
+    color: rgb(255, 165, 0);
+}
+.thick-green-border {
+    border: 10px solid var(--primaryColor-back, grey);
+    border-radius: 50%;
+}
+
+
+#beerLike{
+    grid-area: beerLike;
+    grid-row: 6;
+    width: 500px;
+    background-color: var(--primaryColor-back, grey);
+    padding: 1.5em;
+    margin: 20px;
+}
+
