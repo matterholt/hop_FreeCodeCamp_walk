@@ -1,15 +1,14 @@
 
 :root{
     /*below is a taste of css variables*/
-    --primaryColor-back: #45678a;
-    --primaryColor_fore: #deba8c;
+    --primaryColor-back: hsl(202, 47%, 20%);
+    --primaryColor_fore: #f1a94b;
 }
 @media (min-width: 350px) {
     :root{
         --primaryColor-back: #45678a;
     }
 }
-
 
 /*BEM block element modifier 
 need some studies on naming
@@ -65,7 +64,7 @@ body{
     grid-row: 5;
     width: 600px;
     background-color: var(--primaryColor-back, grey);
-    color: var(--primaryColor-fore, red);
+    color: var(--primaryColor_fore, red);
     padding: 20px;
     margin: 20px;
     letter-spacing: 2px;
